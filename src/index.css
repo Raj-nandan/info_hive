@@ -1,13 +1,124 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color: #8d908f;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img{
+  height: 40vh;
+  object-fit:contain;
+  margin-bottom: 10px;
+  margin-top: -45px;
+}
+
+h1{
+  color: rgb(14 11 11);
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.search-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 16px;
+  transform: 0.4s;
+}
+
+.search-box input{
+  display: block;
+  appearance: none;
+  outline: none;
+  border: none;
+  padding: 16px;
+  width: 100%;
+  transform: 0.4s;
+}
+
+.search-box:focus-within{
+  box-shadow: 3px 3px 6px rgb(33, 32, 32);
+  transform: translateY(-5px);
+}
+
+.results{
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.result{
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  background-color: #fff;
+  border-radius: 16px;
+  transform: 0.4s;
+}
+
+.result:hover{
+  box-shadow: 3px 3px 6px rgb(31, 30, 30);
+}
+
+.result h3{
+  color: #3a3939;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.result p{
+  color: #313131;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.result p .searchmatch{
+  font-weight: 700;
+  color: rgb(108, 0, 0);
+}
+
+.result a{
+  display: inline-block;
+  padding: 12px 16px;
+  background-color: #5ea9d2;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 12px;
+  transform: 0.4s;
+}
+.result a:hover{
+  background-color: #0ed5d5;
+}
+
+@media screen and (min-width: 320px) {
+  .search-box{
+    width: 80%;
+  }
+
+  .results{
+    width: 80%;
+  }
 }
